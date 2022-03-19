@@ -1,5 +1,16 @@
 <h1>Editing Book</h1>
 
+<% flash.each do |message_type, message| %>
+  <% if message_type == "notice" %>
+    <p class="blue"><%= message %></p>
+  <% else %>
+    <p class="red"><%= message %></p>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+<% end %>
+
 <%= form_with model: @book do |f| %>
   <div class="edit_book_field">
     <label class="book_title">Title</label>
