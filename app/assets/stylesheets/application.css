@@ -14,7 +14,8 @@
  *= require_self
  */
 
-.top-body {
+body {
+  width: 100%;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -22,8 +23,17 @@
   margin: 33px;
 }
 
-.top-body p {
+table {
+  table-layout: fixed;
+}
+
+p {
   display: block;
+
+}
+
+p, td, ul {
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   margin: 33px;
 }
@@ -32,9 +42,44 @@ a {
   color: #000;
 }
 
+td {
+  padding: 0 5px 7px 5px;
+}
 
+.notice {
+  color: blue;
+}
 
+.alert {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
 
-.book_title , .book_body {
+.alert_message {
+  text-align: left;
+  padding: 5px 5px 5px 15px;
+  margin: -7px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: #c00;
+}
+
+.new_book_field, .new_book_action, .edit_book_field, .edit_book_action {
+  margin-bottom: 10px;
+}
+
+label {
   display: block;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
 }
